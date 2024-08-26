@@ -1,0 +1,32 @@
+@startuml
+|Professor|
+start
+
+|Sistema|
+if (Login efetuado?) then (Sim)
+else (Não)
+    |Professor|
+    :Efetuar login;
+endif
+
+|Professor|
+:Selecionar turma;
+:Selecionar uma ação;
+
+if (Adicionar ou Remover Aula?) then (Adicionar)
+    :Adicionar Aula;
+else (Remover)
+    :Remover Aula;
+endif
+:Escolher datas;
+
+if (Confirmar ação?) then (Sim)
+    |Sistema|
+    :Submete a grade de presenças;
+else (Não)
+    |Sistema|
+    :Cancela a operação;
+endif
+
+stop
+@enduml

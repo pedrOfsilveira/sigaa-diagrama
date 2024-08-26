@@ -1,0 +1,17 @@
+@startuml
+|Usuário|
+start
+
+|Sistema|
+if (Login efetuado?) then (Sim)
+else (Não)
+    |Usuário|
+    :Efetuar login;
+endif
+
+|Usuário|
+:Selecionar turma;
+:Ver turmas;
+
+end
+@enduml

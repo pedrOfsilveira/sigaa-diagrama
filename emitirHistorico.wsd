@@ -1,0 +1,22 @@
+@startuml
+|Professor|
+start
+
+|Sistema|
+if (Login efetuado?) then (Sim)
+else (Não)
+    |Professor|
+    :Efetuar login;
+endif
+
+|Professor|
+:Selecionar turma;
+:Visualizar participantes;
+:Selecionar Aluno;
+:Emitir histórico;
+
+|Sistema|
+:Gera histórico do aluno;
+
+end
+@enduml
